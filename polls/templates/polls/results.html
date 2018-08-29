@@ -12,9 +12,10 @@
 
 <h1><li>{{ question.question_text }}<li></h1>
 
+
 <ul>
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} голос{{ choice.votes|pluralize:"ов" }}</li>
 {% endfor %}
 </ul>
 
@@ -22,3 +23,4 @@
 
 </body>
 </html>
+
